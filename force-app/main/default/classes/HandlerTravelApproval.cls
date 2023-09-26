@@ -8,6 +8,7 @@ public class HandlerTravelApproval implements BotHandler {
             session.put('step', 'destination');
             return new BotResponse(message, session);
         }
+
 		String step = session.get('step');
         if (step == 'destination') {
             session.put('destination', utterance);
